@@ -1,25 +1,6 @@
-spring:
-  main:
-    show-banner: false
-  thymeleaf:
-    cache: false
-    
-server:
-  port: 8443
-  ssl:
-# Ex. key-store: "mykeys.jks"
-    key-store: classpath:mykeys.jks
-    key-alias: tomcat
-    key-password: letmein
-    key-store-password: letmein
-    key-store-type: JKS
-    
-logging:
-  file: /logs/BookWorm.log
-  level:
-    root: INFO
-#    org.springframework.security: DEBUG
-
-
-amazon: 
+amazon:
   associateId: habuma-20
+  
+spring:
+  profiles:
+    active: development
